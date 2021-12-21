@@ -1,0 +1,28 @@
+{
+  "name": "com.wedream",
+  "version": "1.0.0",
+  "description": "This project is about finding unicorn jobs in Software Engineering world.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ravibisht/we-dream.git"
+  },
+  "author": "Stark Bisht",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ravibisht/we-dream/issues"
+  },
+  "homepage": "https://github.com/ravibisht/we-dream#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "express-async-errors": "^3.1.1",
+    "http-status-code": "^2.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.2",
+    "nodemon": "^2.0.15"
+  }
+}
