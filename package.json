@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "This project is about finding unicorn jobs in Software Engineering world.",
   "main": "app.js",
+  "type": "module",
   "scripts": {
+    "start": "nodemon --experimental-specifier-resolution=node app.js",
+    "dev": "nodemon ./app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,12 +20,19 @@
   },
   "homepage": "https://github.com/ravibisht/we-dream#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.2",
     "express-async-errors": "^3.1.1",
+    "express-rate-limit": "^6.0.4",
+    "helmet": "^5.0.1",
     "http-status-code": "^2.1.0",
+    "http-status-codes": "^2.1.4",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.1.2",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "xss-clean": "^0.1.1"
   }
 }
