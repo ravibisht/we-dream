@@ -22,7 +22,7 @@ app.use(express.static('./public'))
 app.use(express.json())
 
 app.get("/", (req, res) => {
-    req.setEncoding("Testing done")
+    req.send("Testing done")
 })
 // Security
 app.set('trust proxy', 1)
