@@ -1,1 +1,1 @@
-web : node --experimental-specifier-resolution=node app.js
+web:node --experimental-specifier-resolution=node app.js
