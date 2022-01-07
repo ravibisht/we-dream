@@ -21,11 +21,16 @@ app.use(urlencoded({ extended: true }))
 app.use(express.static('./public'))
 app.use(express.json())
 
+app.get("/test", (req, res) => {
+    req.setEncoding("Testing done")
+})
 // Security
+app.set('trust proxy', 1)
 app.use(rateLimit({
     windowMs: 15 * 60 * 100, // 15 miniute
     max: 100
 }))
+
 app.use(helmet())
 app.use(cors())
 app.use(xssClean())
