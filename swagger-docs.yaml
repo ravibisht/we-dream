@@ -63,12 +63,11 @@ paths:
           headers: {}
       deprecated: false
       security: []
-      paths:
   /job:
     get:
       tags:
       - Jobs
-      summary: Get all jobs
+      summary: Get  All Jobs
       operationId: Getalljobs
       parameters: []
       responses:
@@ -77,7 +76,7 @@ paths:
           headers: {}
       deprecated: false
       
-    /job/{id}:
+  /job/{id}:
     parameters:
       - in: path
         name: id
@@ -88,7 +87,7 @@ paths:
     get:
       tags:
       - Jobs
-      summary: Get job
+      summary: Get Job by ID
       operationId: Getjob
       parameters: []
       responses:
