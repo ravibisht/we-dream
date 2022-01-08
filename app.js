@@ -11,7 +11,8 @@ import helmet from "helmet"
 import rateLimit from "express-rate-limit"
 import xssClean from "xss-clean"
 import cors from "cors"
-
+import swaggerUI from 'swagger-ui-express'
+import YAML from "yamljs"
 
 const app = express()
 const PORT = process.env.PORT || 3000
@@ -22,8 +23,13 @@ app.use(express.static('./public'))
 app.use(express.json())
 
 app.get("/", (req, res) => {
-    res.send("Testing done")
+    res.send("Testing done <br>  <a href='/docs'>Document</>")
 })
+
+// Swagger UI docs
+const swaggerDoc = YAML.load('./swagger-docs.yaml')
+app.use('/docs', swaggerUI.serve, swaggerUI.setup(swaggerDoc))
+
 // Security
 app.set('trust proxy', 1)
 app.use(rateLimit({
